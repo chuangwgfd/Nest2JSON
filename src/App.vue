@@ -74,7 +74,7 @@ export default {
           if (lineLevel < level) break; // 完成當前層級的解析
 
           let title = line.replace(regex, "").trim();
-          let node = { title: title };
+          let node = { title: title, key: match[0] };
           linesProcessed++; // 計算處理的行數
 
           // 檢查下一行是否為子層級
